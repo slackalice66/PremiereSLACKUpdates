@@ -1,0 +1,35 @@
+{
+  "updated": "2026-04-15",
+  "latest": {
+    "version": "26.0.2",
+    "releaseDate": "2026-03-12",
+    "releaseNotesUrl": "https://helpx.adobe.com/premiere-pro/using/whats-new/2026.html"
+  },
+  "versions": [
+    {
+      "version": "26.0.2",
+      "releaseDate": "2026-03-12",
+      "knownIssues": []
+    },
+    {
+      "version": "26.0.1",
+      "releaseDate": "2026-01-22",
+      "knownIssues": []
+    },
+    {
+      "version": "26.0.0",
+      "releaseDate": "2025-10-14",
+      "knownIssues": []
+    },
+    {
+      "version": "25.6.0",
+      "releaseDate": "2025-08-12",
+      "knownIssues": []
+    },
+    {
+      "version": "25.5.0",
+      "releaseDate": "2025-06-10",
+      "knownIssues": []
+    }
+  ]
+}
