@@ -1,11 +1,16 @@
 {
-  "updated": "2026-04-15",
+  "updated": "2026-04-27",
   "latest": {
-    "version": "26.0.2",
-    "releaseDate": "2026-03-12",
+    "version": "26.2",
+    "releaseDate": "2026-04-16",
     "releaseNotesUrl": "https://helpx.adobe.com/premiere-pro/using/whats-new/2026.html"
   },
   "versions": [
+    {
+      "version": "26.2",
+      "releaseDate": "2026-04-16",
+      "knownIssues": []
+    },
     {
       "version": "26.0.2",
       "releaseDate": "2026-03-12",
