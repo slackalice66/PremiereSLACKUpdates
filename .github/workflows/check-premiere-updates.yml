@@ -1,0 +1,39 @@
+name: Check Premiere Pro Updates
+
+on:
+  schedule:
+    # Every Monday at 09:00 UTC
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+
+jobs:
+  check-updates:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Run update check
+        run: python scripts/check_updates.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet versions.json; then
+            echo "No changes to commit."
+          else
+            NEW_VERSION=$(python3 -c "import json; d=json.load(open('versions.json')); print(d['latest']['version'])")
+            git add versions.json
+            git commit -m "Update latest Premiere Pro version to ${NEW_VERSION}"
+            git push
+          fi
